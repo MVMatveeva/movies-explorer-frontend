@@ -1,0 +1,14 @@
+.NavTab {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+}
+
+.NavTab__navigation {
+    color: #fff;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    text-decoration: underline;
+}

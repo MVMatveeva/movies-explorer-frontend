@@ -1,0 +1,20 @@
+.Promo {
+    display: flex;
+    justify-content: center;
+    background-color: #F3C1F8;
+}
+
+.Promo__text {
+    text-align: center;
+    width: 730px;
+    font-weight: 400;
+    font-size: 50px;
+    margin-top: 184px;
+    margin-bottom: 224px;
+}
+
+.Promo__logo {
+    position: absolute;
+    margin-top: 82px;
+    margin-bottom: 122px;
+}
