@@ -1,3 +1,19 @@
 .MoviesCard {
-    
+    position: relative;
+}
+
+.MoviesCard__save {
+    position: absolute;
+    top: 14px;
+    left: 274px;
+    border-radius: 20px;
+    padding: 6px 7px 6px;
+    font-size: 10px;
+}
+
+.MoviesCard__saved {
+    position: absolute;
+    top: 14px;
+    background-color: #FF4062;
+    border-radius: 50%;
 }

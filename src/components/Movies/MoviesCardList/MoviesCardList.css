@@ -1,4 +1,8 @@
 .MoviesCardList{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 30px 60px;
     margin-left: 70px;
     margin-right: 70px;
 }
