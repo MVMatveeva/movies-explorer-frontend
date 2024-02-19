@@ -1,3 +1,11 @@
 .Movies {
     margin-top: 70px;
 }
+
+.Movies__button{
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-top: 89px; 
+    margin-bottom: 151px;
+    background-color: #fff;
+}

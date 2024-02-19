@@ -5,6 +5,17 @@ function MoviesCardList() {
   return (
     <div className="MoviesCardList">
       <MoviesCard />
+      <MoviesCard />
+      <MoviesCard />
+      <MoviesCard />
+      <MoviesCard />
+      <MoviesCard />
+      <MoviesCard />
+      <MoviesCard />
+      <MoviesCard />
+      <MoviesCard />
+      <MoviesCard />
+      <MoviesCard />
     </div>
   );
 }

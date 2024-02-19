@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 30px 60px;
+    gap: 60px 30px;
     margin-left: 70px;
     margin-right: 70px;
+    margin-top: 80px;
 }
