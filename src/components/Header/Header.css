@@ -1,47 +1,88 @@
-.Header{
-    display: flex;
-    justify-content: space-between;
-    background-color: #F3C1F8;
-  }
+.Header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #F3C1F8;
+}
 
 .Header__logo {
-    width: 38px;
-    border-style: none;
-    margin-top: 18px;
-    margin-bottom: 18px;
-    margin-left: 70px;
-  }
+  width: 38px;
+  border-style: none;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  margin-left: 70px;
+}
 
-  .Header__button-account{
-    padding: 0;
-    margin-top: 21px;
-    margin-bottom: 23px;
-    margin-right: 70px;
-    display: flex;
-    background-color: #F3C1F8;
-    align-items: center;
-    margin-left: 50px;
-    font-weight: 500;
-    font-size: 16px;
-    border: 0;
-  }
+.Header__button-account {
+  padding: 0;
+  margin-top: 21px;
+  margin-bottom: 23px;
+  display: flex;
+  background-color: #F3C1F8;
+  align-items: center;
+  margin-left: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  border: 0;
+}
 
-  .Header__button-img{
-    margin-left: 13px;
-  }
+.Header__button-account:hover {
+  opacity: 70%;
+}
 
-  .Navigation{
-    display: flex;
-    align-items: center;
-  }
+.Header__button-img {
+  margin-left: 13px;
+}
 
-  .Header__film-saved {
-    margin-left: 20px;
-    font-size: 18px;
-    font-weight: 400;
-  }
+.Navigation {
+  display: flex;
+  align-items: center;
+  margin-right: 70px;
+}
 
-  .Header__film {
-    font-size: 18px;
-    font-weight: 400;
-  }
+.Header__film-saved {
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.Header__film-saved:hover {
+  opacity: 70%;
+}
+
+.Header__film {
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.Header__film:hover {
+  opacity: 70%;
+}
+
+.Header__register {
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.Header__register:hover {
+  opacity: 70%;
+}
+
+.Header__enter {
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  background-color: #000;
+  border-radius: 3px;
+  margin-left: 30px;
+  padding: 8px 20px 8px;
+}
+
+.Header__enter {
+  opacity: 70%;
+}
