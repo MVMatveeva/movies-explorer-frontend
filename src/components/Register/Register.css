@@ -1,0 +1,78 @@
+.Register {
+    margin-left: 442px;
+    margin-right: 442px;
+    margin-top: 70px;
+}
+
+.Register__header{
+    margin-bottom: 40px;
+}
+
+.Register__heading {
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.Register__form {
+    border: 0;
+}
+
+.Register__fieldset{
+    border: 0;
+    padding: 0;
+}
+
+.Register__input {
+    border: 0;
+    width: 366px;
+    background-color: #F9F9F9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.Register__input:last-child {
+margin-bottom: 91px;
+}
+
+.Register__text {
+    font-size: 10px;
+    font-weight: 400;
+    color: #A0A0A0;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.Register__button{
+    width: 396px;
+    background-color: #000;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 13px 0 15px;
+    margin-left: 3px;
+}
+
+.Register__sign{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    }
+
+.Register__sign-text{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #A0A0A0;
+}
+
+.Register__sign-link{
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 6px;
+    color: #000;
+    text-decoration: none;
+}

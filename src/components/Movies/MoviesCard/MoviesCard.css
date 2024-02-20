@@ -23,10 +23,27 @@
     left: 325px;
 }
 
+.MoviesCard__delete {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 14px;
+    background-color: #F9F9F9;
+    border-radius: 50%;
+    border: 0;
+    height: 21px;
+    left: 325px;
+    width: 21px;
+    height: 21px;
+    justify-content: center;
+}
+
 .MoviesCard__block {
     display: flex;
     justify-content: space-between;
     margin-top: 14px;
+    margin-right: 14px;
+    margin-left: 14px;
 }
 
 .MoviesCard__name {
@@ -40,4 +57,6 @@
     color: #A0A0A0;
     font-size: 11px;
     font-weight: 400;
+    background-color: #F9F9F9;
+    border-radius: 3px;
 }

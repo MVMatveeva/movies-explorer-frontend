@@ -7,6 +7,10 @@ import Header from "./components/Header/Header.jsx";
 import Main from "./components/Main/Main.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Movies from "./components/Movies/Movies.jsx";
+import SavedMovies from "./components/SavedMovies/SavedMovies.jsx"
+import Register from "./components/Register/Register.jsx";
+import Login from "./components/Login/Login.jsx";
+import Profile from "./components/Profile/Profile.jsx";
 
 function App() {
   return (
@@ -22,8 +26,11 @@ function App() {
             </>
           }
         />
-
         <Route path="/movies" element={<Movies />} />
+        <Route path="/saved-movies" element={<SavedMovies />} />
+        <Route path="/signup" element={<Register />} />
+        <Route path="/signin" element={<Login />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </div>
   );
