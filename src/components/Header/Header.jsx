@@ -1,12 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../images/header_logo.svg";
 import profile from "../../images/profile.svg";
 
 function Header(props) {
+  const location = useLocation();
   return (
     <div className="Header" style={{ backgroundColor: props.backgroundColor }}>
       <img className="Header__logo" src={logo} alt="logo" />
+      {location.pathname !== "/signup" && location.pathname !== "/signin" && (
       <nav className="Navigation">
         {props.loggedIn ? (
           <>
@@ -26,6 +28,7 @@ function Header(props) {
           </>
         )}
       </nav>
+      )}
     </div>
   );
 }

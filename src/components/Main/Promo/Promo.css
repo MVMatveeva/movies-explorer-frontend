@@ -6,15 +6,17 @@
 
 .Promo__text {
     text-align: center;
-    width: 730px;
+    width: 56.5891vw;
     font-weight: 400;
     font-size: 50px;
-    margin-top: 184px;
-    margin-bottom: 224px;
+    margin-top: 187px;
+    margin-bottom: 221px;
+    line-height: 58px;
+    letter-spacing: -0.039em;
 }
 
 .Promo__logo {
     position: absolute;
-    margin-top: 82px;
+    margin-top: 84px;
     margin-bottom: 122px;
 }

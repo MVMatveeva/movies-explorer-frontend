@@ -36,7 +36,7 @@
 .Navigation {
   display: flex;
   align-items: center;
-  margin-right: 70px;
+  margin-right: 79px;
 }
 
 .Header__film-saved {
@@ -79,7 +79,7 @@
   cursor: pointer;
   background-color: #000;
   border-radius: 3px;
-  margin-left: 30px;
+  margin-left: 28px;
   padding: 8px 20px 8px;
 }
 

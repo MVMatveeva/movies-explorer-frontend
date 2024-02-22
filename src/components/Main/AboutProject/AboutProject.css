@@ -4,11 +4,12 @@
     border-bottom: 1px solid #000;
     padding-bottom: 23px;
     margin: 110px 70px 70px;
+    letter-spacing: -0.1em;
 }
 
 .AboutProject__block {
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 42.6357vw);
     gap: 26px 40px;
     margin-right: 70px;
     margin-left: 70px;
@@ -18,21 +19,24 @@
 .AboutProject__heading{
     font-size: 20px;
     font-weight: 400;
+    margin: 0;
+    letter-spacing: -0.04em;
 }
 
 .AboutProject__text{
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+    margin: 0;
 }
 
 .AboutProject__block-weeks {
     display: grid;
-    grid-template-columns: 17.81vw auto;
-    grid-template-rows: repeat( 2, 36px);
+    grid-template-columns: 17.81vw 70.6977vw;
+    grid-template-rows: repeat( 2, 2.7907vw);
     margin-left: 70px;
     margin-right: 70px;
-    margin-bottom: 110px;
+    margin-bottom: 104px;
 }
 
 .AboutProject__week {
@@ -43,7 +47,7 @@
     justify-content: center;
     align-items: center;
     font-size: 14px;
-    font-weight: 400px;
+    font-weight: 400;
 }
 
 .AboutProject__weeks{
@@ -53,7 +57,7 @@
     margin: 0;
     background-color: #F2F2F2;
     font-size: 14px;
-    font-weight: 400px;
+    font-weight: 400;
 }
 
 .AboutProject__weeks-text {
@@ -62,6 +66,7 @@
     justify-content: center;
     align-items: center;
     font-size: 14px;
-    font-weight: 400px;
+    font-weight: 400;
     color: #A0A0A0;
+    padding-top: 10px;
 }

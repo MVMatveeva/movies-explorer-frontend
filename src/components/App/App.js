@@ -14,8 +14,9 @@ import Profile from "../Profile/Profile.jsx";
 import NotFoundError from "../NotFoundError/NotFoundError.jsx";
 
 function App() {
-  const [color, setColor] = useState("#F3C1F8");
   const navigate = useNavigate();
+  const [color, setColor] = useState("#F3C1F8");
+  const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
     const whiteHeader = [
@@ -42,7 +43,7 @@ function App() {
           path="/"
           element={
             <>
-              <Header backgroundColor={color} />
+              <Header backgroundColor={color} loggedIn={loggedIn} />
               <Main />
               <Footer />
             </>
@@ -52,7 +53,7 @@ function App() {
           path="/movies"
           element={
             <>
-              <Header backgroundColor={color} />
+              <Header backgroundColor={color} loggedIn={loggedIn} />
               <Movies />
               <Footer />
             </>
@@ -62,7 +63,7 @@ function App() {
           path="/saved-movies"
           element={
             <>
-              <Header backgroundColor={color} />
+               <Header backgroundColor={color} loggedIn={loggedIn} />
               <SavedMovies />
               <Footer />
             </>
@@ -92,7 +93,7 @@ function App() {
           path="/profile"
           element={
             <>
-              <Header backgroundColor={color} />
+               <Header backgroundColor={color} loggedIn={loggedIn} />
               <Profile />
               <Footer />
             </>

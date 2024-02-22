@@ -21,8 +21,3 @@
 @import url(./components/Profile/Profile.css);
 @import url(./components/NotFoundError/NotFoundError.css);
 
-
-
-* {
-  border: 1px solid red;
-}
