@@ -1,34 +1,44 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../../images/header_logo.svg";
 import profile from "../../images/profile.svg";
 
 function Header(props) {
-  const location = useLocation();
   return (
     <div className="Header" style={{ backgroundColor: props.backgroundColor }}>
       <img className="Header__logo" src={logo} alt="logo" />
-      {location.pathname !== "/signup" && location.pathname !== "/signin" && (
+
       <nav className="Navigation">
         {props.loggedIn ? (
           <>
-            <Link className="Header__film">Фильмы</Link>
-            <Link className="Header__film-saved">Сохраненные фильмы</Link>
-            <button className="Header__button-account">
-              Аккаунт
-              <img className="Header__button-img" src={profile} alt="Profile" />
-            </button>
+            <Link className="Header__film" to="/movies">
+              Фильмы
+            </Link>
+            <Link className="Header__film-saved" to="/saved-movies">
+              Сохраненные фильмы
+            </Link>
+            <Link className="Header__button" to="/profile">
+              <button className="Header__button-account">
+                Аккаунт
+                <img
+                  className="Header__button-img"
+                  src={profile}
+                  alt="Profile"
+                />
+              </button>
+            </Link>
           </>
         ) : (
           <>
-            <Link className="Header__register" path="/signup">
+            <Link className="Header__register" to="/signup">
               Регистрация
             </Link>
-            <button className="Header__enter">Войти</button>
+            <Link className="Header__enter" to="/signin">
+              <button className="Header__enter-button">Войти</button>
+            </Link>
           </>
         )}
       </nav>
-      )}
     </div>
   );
 }

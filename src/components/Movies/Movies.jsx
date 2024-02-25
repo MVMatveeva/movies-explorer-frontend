@@ -10,7 +10,7 @@ function Movies() {
       <SearchForm />
       {/*<Preloader />*/}
       <MoviesCardList />
-      <button className="Movies__button">Еще</button>
+      
     </div>
   );
 }

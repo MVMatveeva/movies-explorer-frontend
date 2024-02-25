@@ -3,7 +3,7 @@ import myPhoto from "../../../images/photo_2024-02-14_23-02-24.jpg";
 
 function AboutMe() {
   return (
-    <div className="AboutMe">
+    <div className="AboutMe" id="AboutMe">
       {/*компонент с информацией о студенте*/}
       <h2 className="AboutMe__about">Студент</h2>
       <div className="AboutMe__block">

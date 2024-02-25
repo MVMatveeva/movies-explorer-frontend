@@ -21,6 +21,7 @@
 .Footer__block{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .Footer__year {

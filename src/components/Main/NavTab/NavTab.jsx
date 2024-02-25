@@ -4,11 +4,11 @@ function NavTab() {
   return (
     <div className="NavTab">
       {/* компонент с навигацией по странице «О проекте»*/}
-      <p className="NavTab__navigation NavTab__navigation_about">О проекте</p>
-      <p className="NavTab__navigation NavTab__navigation_technologies">
+      <a className="NavTab__navigation NavTab__navigation_about" href="#AboutProject">О проекте</a>
+      <a className="NavTab__navigation NavTab__navigation_technologies" href="#Techs">
         Технологии
-      </p>
-      <p className="NavTab__navigation NavTab__navigation_student">Студент</p>
+      </a>
+      <a className="NavTab__navigation NavTab__navigation_student" href="#AboutMe">Студент</a>
     </div>
   );
 }

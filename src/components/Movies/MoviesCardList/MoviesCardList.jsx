@@ -4,20 +4,14 @@ import MoviesCard from "../MoviesCard/MoviesCard";
 function MoviesCardList() {
   return (
     <div className="MoviesCardList">
+      <ul className="MoviesCardList__list">
       <MoviesCard />
-      <MoviesCard />
-      <MoviesCard />
-      <MoviesCard />
-      <MoviesCard />
-      <MoviesCard />
-      <MoviesCard />
-      <MoviesCard />
-      <MoviesCard />
-      <MoviesCard />
-      <MoviesCard />
-      <MoviesCard />
+      </ul>
+      <button className="MoviesCardList__button">Еще</button>
     </div>
   );
 }
+
+
 
 export default MoviesCardList;

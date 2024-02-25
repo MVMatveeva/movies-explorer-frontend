@@ -2,7 +2,7 @@ import React from "react";
 
 function Techs() {
   return (
-    <div className="Techs">
+    <div className="Techs" id="Techs">
       {/*компонент с использованными технологиями*/}
       <h2 className="Techs__about">Технологии</h2>
       <div className="Techs__block">

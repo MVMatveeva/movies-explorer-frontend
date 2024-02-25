@@ -17,6 +17,7 @@ function App() {
   const navigate = useNavigate();
   const [color, setColor] = useState("#F3C1F8");
   const [loggedIn, setLoggedIn] = useState(false);
+  const [visibleCards, setVisibleCards] = useState(12);
 
   useEffect(() => {
     const whiteHeader = [
@@ -35,6 +36,10 @@ function App() {
       setColor("#F3C1F8");
     };
   }, [navigate]);
+
+  const showMoreCards = () => {
+    setVisibleCards(displayedCard => displayedCard + 3);
+  };
 
   return (
     <div className="App">
@@ -63,7 +68,7 @@ function App() {
           path="/saved-movies"
           element={
             <>
-               <Header backgroundColor={color} loggedIn={loggedIn} />
+              <Header backgroundColor={color} loggedIn={loggedIn} />
               <SavedMovies />
               <Footer />
             </>
@@ -73,7 +78,6 @@ function App() {
           path="/signup"
           element={
             <>
-              <Header backgroundColor={color} />
               <Register />
               <Footer />
             </>
@@ -83,7 +87,6 @@ function App() {
           path="/signin"
           element={
             <>
-              <Header backgroundColor={color} />
               <Login />
               <Footer />
             </>
@@ -93,7 +96,7 @@ function App() {
           path="/profile"
           element={
             <>
-               <Header backgroundColor={color} loggedIn={loggedIn} />
+              <Header backgroundColor={color} loggedIn={loggedIn} />
               <Profile />
               <Footer />
             </>

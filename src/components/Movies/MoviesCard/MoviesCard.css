@@ -1,5 +1,6 @@
 .MoviesCard {
     position: relative;
+    cursor: pointer;
 }
 
 .MoviesCard__save {
@@ -41,7 +42,7 @@
 .MoviesCard__block {
     display: flex;
     justify-content: space-between;
-    margin-top: 14px;
+    margin-top: 12px;
     margin-right: 14px;
     margin-left: 14px;
 }
@@ -59,4 +60,5 @@
     font-weight: 400;
     background-color: #F9F9F9;
     border-radius: 3px;
+    margin-right: 9px
 }
