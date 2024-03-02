@@ -1,46 +1,121 @@
 .AboutMe__about {
-    font-weight: 400;
-    font-size: 25px;
-    border-bottom: 1px solid #000;
-    padding-bottom: 23px;
-    margin: 110px 70px 70px;
+  font-weight: 400;
+  font-size: 25px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 23px;
+  margin: 110px 70px 70px;
+  letter-spacing: -0.09em;
 }
 
 .AboutMe__block {
-    display: flex;
-    column-gap: 270px;
-    margin-left: 70px;
-    margin-right: 70px;
+  display: flex;
+  column-gap: 270px;
+  margin-left: 70px;
+  margin-right: 87px;
 }
 
 .AboutMe__photo {
-    width: 270px;
-    height: 327px;
-    border-radius: 10px;
+  width: 20.9302vw;
+  height: 25.3488vw;
+  border-radius: 10px;
 }
 
 .AboutMe__name {
-    font-size: 50px;
-    font-weight: 400;
-    margin: 0;
+  font-size: 50px;
+  font-weight: 400;
+  margin: 0;
 }
 
 .AboutMe__profession {
-    font-size: 18px;
-    font-weight: 500;
-    margin-top: 18px;
-    margin-bottom: 26px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 18px;
+  margin-bottom: 26px;
 }
 
 .AboutMe__description {
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 0px;
-    margin-bottom: 99px;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 117px;
 }
 
 .AboutMe__github {
-    font-size: 14px;
-    font-weight: 400;
-    margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  cursor: pointer;
+  text-decoration: none;
+  color: #000;
+}
+
+.AboutMe__github:hover{
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  .AboutMe__about {
+    margin: 90px 50px 61px;
+  }
+  .AboutMe__block {
+    column-gap: 49px;
+    margin-left: 6.5104vw;
+    margin-right: 6.5104vw;
+  }
+
+  .AboutMe__name{
+    font-size: 40px;
+  }
+
+  .AboutMe__photo{
+    width: 33.2031vw;
+    height: 39.9740vw;
+  }
+
+  .AboutMe__profession{
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 24px;
+  }
+
+  .AboutMe__description{
+    font-size: 12px;
+    margin-bottom: 112px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+.AboutMe__about{
+  font-size: 18px;
+  margin: 90px 14px 61px;
+  letter-spacing: -0.04em;
+  padding-bottom: 26px;
+}
+
+.AboutMe__block{
+  flex-direction: column;
+  margin-left: 4.3750vw;
+  margin-right: 4.3750vw;
+}
+
+.AboutMe__photo{
+  order: 1;
+  width: 91.2500vw;
+  height: 110.0000vw;
+  margin-bottom: 40px;
+}
+.AboutMe__student{
+  order: 2;
+}
+.AboutMe__name{
+  font-size: 30px;
+}
+.AboutMe__description{
+  font-size: 11px;
+  margin-bottom: 60px;
+}
+.AboutMe__profession{
+  font-size: 11px;
+  margin-top: 23px;
+}
 }

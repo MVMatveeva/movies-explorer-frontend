@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 //import ProtectedRoute from "./ProtectedRoute";
 //import { Link } from "react-router-dom";
 import "../../index.css";
@@ -12,12 +12,27 @@ import Register from "../Register/Register.jsx";
 import Login from "../Login/Login.jsx";
 import Profile from "../Profile/Profile.jsx";
 import NotFoundError from "../NotFoundError/NotFoundError.jsx";
+import profile from "../../images/profile.svg";
+import profileBlack from "../../images/header-logo-black.svg";
+
 
 function App() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [color, setColor] = useState("#F3C1F8");
+  const [icon, setIcon] = useState(profile);
   const [loggedIn, setLoggedIn] = useState(false);
   const [visibleCards, setVisibleCards] = useState(12);
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  
+
+  const handleOpenHamburger = () => {
+    setHamburgerOpen(true);
+  };
+
+  const handleCloseHamburger = () => {
+    setHamburgerOpen(false);
+  };
 
   useEffect(() => {
     const whiteHeader = [
@@ -37,9 +52,15 @@ function App() {
     };
   }, [navigate]);
 
-  const showMoreCards = () => {
-    setVisibleCards(displayedCard => displayedCard + 3);
-  };
+  useEffect(() => {
+    const blackIcon = ["/movies", "/saved-movies", "/profile"];
+    if (blackIcon.includes(location.pathname)) {
+      setIcon(profileBlack);
+    } else {
+      setIcon(profile);
+    }
+  }, [location.pathname, setIcon]);
+
 
   return (
     <div className="App">
@@ -48,7 +69,14 @@ function App() {
           path="/"
           element={
             <>
-              <Header backgroundColor={color} loggedIn={loggedIn} />
+              <Header
+                backgroundColor={color}
+                loggedIn={loggedIn}
+                profile={icon}
+                menuOpen={handleOpenHamburger}
+                hamburgerOpen={hamburgerOpen}
+                onClose={handleCloseHamburger}
+              />
               <Main />
               <Footer />
             </>
@@ -58,7 +86,14 @@ function App() {
           path="/movies"
           element={
             <>
-              <Header backgroundColor={color} loggedIn={loggedIn} />
+              <Header
+                backgroundColor={color}
+                loggedIn={loggedIn}
+                profile={icon}
+                menuOpen={handleOpenHamburger}
+                hamburgerOpen={hamburgerOpen}
+                onClose={handleCloseHamburger}
+              />
               <Movies />
               <Footer />
             </>
@@ -68,7 +103,14 @@ function App() {
           path="/saved-movies"
           element={
             <>
-              <Header backgroundColor={color} loggedIn={loggedIn} />
+              <Header
+                backgroundColor={color}
+                loggedIn={loggedIn}
+                profile={icon}
+                menuOpen={handleOpenHamburger}
+                hamburgerOpen={hamburgerOpen}
+                onClose={handleCloseHamburger}
+              />
               <SavedMovies />
               <Footer />
             </>
@@ -79,7 +121,6 @@ function App() {
           element={
             <>
               <Register />
-              <Footer />
             </>
           }
         />
@@ -88,7 +129,6 @@ function App() {
           element={
             <>
               <Login />
-              <Footer />
             </>
           }
         />
@@ -96,9 +136,15 @@ function App() {
           path="/profile"
           element={
             <>
-              <Header backgroundColor={color} loggedIn={loggedIn} />
+              <Header
+                backgroundColor={color}
+                loggedIn={loggedIn}
+                profile={icon}
+                menuOpen={handleOpenHamburger}
+                hamburgerOpen={hamburgerOpen}
+                onClose={handleCloseHamburger}
+              />
               <Profile />
-              <Footer />
             </>
           }
         />

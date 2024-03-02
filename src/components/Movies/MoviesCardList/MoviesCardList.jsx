@@ -5,13 +5,23 @@ function MoviesCardList() {
   return (
     <div className="MoviesCardList">
       <ul className="MoviesCardList__list">
-      <MoviesCard />
+        <li><MoviesCard /></li>
+        <li><MoviesCard /></li>
+        <li><MoviesCard /></li>
+        <li><MoviesCard /></li>
+        <li><MoviesCard /></li>
+        <li><MoviesCard /></li>
+        <li><MoviesCard /></li>
+        <li><MoviesCard /></li>
+        <li><MoviesCard /></li>
+        <li><MoviesCard /></li>
+        <li><MoviesCard /></li>
+        <li><MoviesCard /></li>
+        <li><MoviesCard /></li>        
       </ul>
       <button className="MoviesCardList__button">Еще</button>
     </div>
   );
 }
-
-
 
 export default MoviesCardList;

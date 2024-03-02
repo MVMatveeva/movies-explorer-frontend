@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 function Footer() {
   return (
     <footer className="Footer">
@@ -9,8 +12,8 @@ function Footer() {
       <div className="Footer__block">
         <p className="Footer__year">&copy; 2024</p>
         <div className="Footer__links">
-          <p className="Footer__link">Яндекс.Практикум</p>
-          <p className="Footer__link">Github</p>
+          <Link className="Footer__link" to="https://practicum.yandex.ru/" target="_blank">Яндекс.Практикум</Link>
+          <Link className="Footer__link" to="https://github.com/" target="_blank">Github</Link>
         </div>
       </div>
     </footer>

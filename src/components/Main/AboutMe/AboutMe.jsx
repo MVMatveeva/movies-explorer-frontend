@@ -1,5 +1,6 @@
 import React from "react";
 import myPhoto from "../../../images/photo_2024-02-14_23-02-24.jpg";
+import { Link } from "react-router-dom";
 
 function AboutMe() {
   return (
@@ -17,7 +18,7 @@ function AboutMe() {
             больниц города Москвы врачом-эпидемиологом. У меня есть муж и
             маленький сын, в настоящее время в декрете.
           </p>
-          <p className="AboutMe__github">Github</p>
+          <Link className="AboutMe__github" to="https://github.com/MVMatveeva?tab=repositories" target="_blank">Github</Link>
         </div>
         <img
           className="AboutMe__photo"

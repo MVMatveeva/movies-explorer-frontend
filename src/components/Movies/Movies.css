@@ -1,4 +1,17 @@
 .Movies {
-    margin-top: 70px;
+    margin-top: 68px;
 }
+
+@media screen and (max-width: 768px) {
+    .Movies {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .Movies {
+        margin-top: 63px;
+    }
+}
+
 

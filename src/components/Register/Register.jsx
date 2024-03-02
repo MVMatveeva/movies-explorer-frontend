@@ -24,7 +24,7 @@ function Register() {
           <div className="Register__block">
             <p className="Register__text">Пароль</p>
             <input className="Register__input Register__input_password" />
-            <span className="Register__error Register__error_password"></span>
+            <span className="Register__error Register__error_password">Что-то пошло не так...</span>
           </div>
         </fieldset>
         <button className="Register__button" type="submit">

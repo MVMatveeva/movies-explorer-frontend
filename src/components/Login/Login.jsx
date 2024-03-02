@@ -23,7 +23,7 @@ function Login() {
           </div>
         </fieldset>
         <button className="Login__button" type="submit">
-          Зарегистрироваться
+          Войти
         </button>
       </form>
       <div className="Login__sign">

@@ -1,64 +1,165 @@
 .MoviesCard {
-    position: relative;
-    cursor: pointer;
+  position: relative;
+  cursor: pointer;
 }
 
-.MoviesCard__save {
-    position: absolute;
-    top: 14px;
-    left: 274px;
-    border-radius: 20px;
-    padding: 6px 7px 6px;
-    font-size: 10px;
+.MoviesCard__button_save {
+  border-radius: 30px;
+  left: 21.4063vw;
+  background-image: url(../../../images/save3d.svg);
+  background-size: 5.625vw 1.6406vw;
+  width: 5.625vw;
+  height: 1.6406vw;
+  border: 0;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.MoviesCard__saved {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 14px;
-    background-color: #FF4062;
-    border-radius: 50%;
-    border: 0;
-    height: 21px;
-    left: 325px;
+.MoviesCard__image:hover .MoviesCard__button_save {
+  opacity: 1;
 }
 
-.MoviesCard__delete {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 14px;
-    background-color: #F9F9F9;
-    border-radius: 50%;
-    border: 0;
-    height: 21px;
-    left: 325px;
-    width: 21px;
-    height: 21px;
-    justify-content: center;
+.MoviesCard__image:hover .MoviesCard__button_delete {
+  opacity: 1;
+}
+
+.MoviesCard__button {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 14px;
+  cursor: pointer;
+}
+
+.MoviesCard__button:hover{
+  opacity: 0.7;
+}
+
+.MoviesCard__button_saved {
+  background-color: #ff4062;
+  border-radius: 50%;
+  border: 0;
+  height: 1.6406vw;
+  width: 1.6406vw;
+  left: 25.3906vw;
+  background-image: url(../../../images/icon__COLOR_invisible.svg);
+  background-repeat: no-repeat;
+  background-size: 0.625vw 0.3516vw;
+  background-position: center;
+}
+
+.MoviesCard__button_delete {
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  border: 0;
+  left: 25.3906vw;
+  width: 1.6406vw;
+  height: 1.6406vw;
+  justify-content: center;
+  opacity: 0;
+}
+
+.MoviesCard__button_delete:hover {
+  opacity: 1;
+}
+.MoviesCard__button_save:hover {
+  opacity: 1;
 }
 
 .MoviesCard__block {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 12px;
-    margin-right: 14px;
-    margin-left: 14px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  margin-right: 14px;
+  margin-left: 14px;
 }
 
 .MoviesCard__name {
-    margin: 0;
-    font-size: 13px;
-    font-weight: 500;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .MoviesCard__time {
-    margin: 0;
-    color: #A0A0A0;
-    font-size: 11px;
-    font-weight: 400;
-    background-color: #F9F9F9;
-    border-radius: 3px;
-    margin-right: 9px
+  margin: 0;
+  color: #a0a0a0;
+  font-size: 11px;
+  font-weight: 400;
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  margin-right: 9px;
 }
+
+.MoviesCard__image {
+  width: 27.907vw;
+}
+
+@media screen and (max-width: 768px) {
+  .MoviesCard__image {
+    width: 44.1406vw;
+  }
+
+  .MoviesCard__block {
+    margin-top: 23px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .MoviesCard__button_save {
+    width: 9.375vw;
+    height: 2.7344vw;
+    background-size: 9.375vw 2.7344vw;
+    left: 32.9427vw;
+  }
+  .MoviesCard__button_saved {
+    width: 2.7344vw;
+    height: 2.7344vw;
+    background-size: 1.0417vw 0.5859vw;
+    left: 39.5833vw;
+  }
+  .MoviesCard__button_delete {
+    width: 2.7344vw;
+    height: 2.7344vw;
+    left: 39.5833vw;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .MoviesCard__image {
+    width: 93.75vw;
+  }
+
+  .MoviesCard__name {
+    font-size: 12px;
+  }
+
+  .MoviesCard__time {
+    font-size: 12px;
+  }
+  .MoviesCard__block {
+    margin-top: 13px;
+  }
+
+  .MoviesCard__button_save {
+    width: 22.5vw;
+    height: 6.5625vw;
+    background-size: 22.5vw 6.5625vw;
+    left: 68.1250vw;
+    opacity: 1;
+  }
+  .MoviesCard__button_saved {
+    width: 6.5625vw;
+    height: 6.5625vw;
+    background-size: 2.5vw 1.4063vw;
+    left: 84.0625vw;
+  }
+  .MoviesCard__button_delete {
+    width: 6.5625vw;
+    height: 6.5625vw;
+    left: 84.0625vw;
+    opacity: 1;
+  }
+
+}
+

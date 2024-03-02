@@ -10,7 +10,6 @@ function Movies() {
       <SearchForm />
       {/*<Preloader />*/}
       <MoviesCardList />
-      
     </div>
   );
 }

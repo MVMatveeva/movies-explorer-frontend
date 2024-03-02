@@ -1,72 +1,162 @@
 .AboutProject__about {
-    font-weight: 400;
-    font-size: 25px;
-    border-bottom: 1px solid #000;
-    padding-bottom: 23px;
-    margin: 110px 70px 70px;
-    letter-spacing: -0.1em;
+  font-weight: 400;
+  font-size: 25px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 23px;
+  margin: 110px 70px 70px;
+  letter-spacing: -0.1em;
 }
 
 .AboutProject__block {
-    display: grid;
-    grid-template-columns: repeat(2, 42.6357vw);
-    gap: 26px 40px;
-    margin-right: 70px;
-    margin-left: 70px;
-    margin-bottom: 110px;
+  display: grid;
+  grid-template-columns: repeat(2, 42.6357vw);
+  gap: 26px 40px;
+  margin-right: 5.4264vw;
+  margin-left: 5.4264vw;
+  margin-bottom: 110px;
 }
 
-.AboutProject__heading{
-    font-size: 20px;
-    font-weight: 400;
-    margin: 0;
-    letter-spacing: -0.04em;
+.AboutProject__heading {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  letter-spacing: -0.04em;
 }
 
-.AboutProject__text{
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-    margin: 0;
+.AboutProject__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
 }
 
 .AboutProject__block-weeks {
-    display: grid;
-    grid-template-columns: 17.81vw 70.6977vw;
-    grid-template-rows: repeat( 2, 2.7907vw);
-    margin-left: 70px;
-    margin-right: 70px;
-    margin-bottom: 104px;
+  display: grid;
+  grid-template-columns: 17.81vw 70.6977vw;
+  grid-template-rows: repeat(2, 2.7907vw);
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-bottom: 104px;
 }
 
 .AboutProject__week {
-    display: flex;
-    margin: 0;
-    background-color: #000;
-    color: #fff;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 400;
+  display: flex;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
 }
 
-.AboutProject__weeks{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    background-color: #F2F2F2;
-    font-size: 14px;
-    font-weight: 400;
+.AboutProject__weeks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background-color: #f2f2f2;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .AboutProject__weeks-text {
-    display: flex;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    font-weight: 400;
-    color: #A0A0A0;
-    padding-top: 10px;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  color: #a0a0a0;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .AboutProject__about {
+    margin: 91px 50px 70px;
+    padding-bottom: 21px;
+  }
+
+  .AboutProject__text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .AboutProject__block {
+    grid-template-columns: repeat(2, 41.5365vw);
+    margin-right: 6.5104vw;
+    margin-left: 6.5104vw;
+    gap: 22px 30px;
+    margin-bottom: 95px;
+  }
+  .AboutProject__block-weeks {
+    grid-template-columns: 18.2292vw 68.75vw;
+    grid-template-rows: repeat(2, 36px);
+    margin-left: 6.5104vw;
+    margin-right: 6.5104vw;
+    margin-right: 70px;
+    margin-bottom: 85px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .AboutProject__about {
+    font-size: 18px;
+    margin: 71px 18px 61px;
+    padding-bottom: 28px;
+    letter-spacing: -0.04em;
+  }
+  .AboutProject__heading {
+    font-size: 18px;
+  }
+  .AboutProject__text {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .AboutProject__block {
+    grid-template-columns: 88.75vw;
+    grid-template-rows: repeat(2, 32p5);
+    gap: 0;
+    margin-left: 5.625vw;
+    margin-right: 5.625vw;
+    margin-bottom: 59px;
+  }
+
+  .AboutProject__heading:nth-child(1) {
+    order: 1;
+    margin: 0 0 18px;
+  }
+
+  .AboutProject__heading:nth-child(2) {
+    order: 3;
+    margin: 0 0 18px;
+  }
+
+  .AboutProject__text:nth-child(3) {
+    order: 2;
+    margin: 0 0 58px;
+  }
+
+  .AboutProject__text:nth-child(4) {
+    order: 4;
+  }
+  .AboutProject__block-weeks {
+    grid-template-columns: 31.25vw 57.5vw;
+    margin-left: 5.625vw;
+    margin-right: 5.625vw;
+  }
+
+  .AboutProject__week {
+    font-size: 11px;
+  }
+
+  .AboutProject__weeks {
+    font-size: 11px;
+  }
+
+  .AboutProject__weeks-text {
+    font-size: 11px;
+    padding-top: 0;
+  }
 }

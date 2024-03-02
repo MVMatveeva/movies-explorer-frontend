@@ -1,40 +1,101 @@
-.Portfolio{
-    margin-left: 70px;
-    margin-right: 70px;
+.Portfolio {
+  margin-left: 70px;
+  margin-right: 70px;
 }
-.Portfolio__about{
-    margin-top: 100px;
-    color: #A0A0A0;
+.Portfolio__about {
+  margin-top: 96px;
+  color: #a0a0a0;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 56px;
+}
+.Portfolio__block {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.Portfolio__block:hover {
+  opacity: 0.7;
+}
+
+.Portfolio__block:last-child {
+  border-bottom: 0;
+  margin-bottom: 125px;
+}
+
+.Portfolio__link {
+  margin-top: 0;
+  margin-bottom: 19px;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  color: #000;
+}
+
+.Portfolio__arrow {
+  margin-top: 0;
+  margin-bottom: 19px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .Portfolio {
+    margin-left: 6.5104vw;
+    margin-right: 6.5104vw;
+  }
+
+  .Portfolio__about {
+    margin-top: 90px;
+  }
+
+  .Portfolio__link {
+    letter-spacing: -0.07em;
+    padding-bottom: 8px;
+  }
+
+  .Portfolio__block {
+    margin-bottom: 28px;
+  }
+
+  .Portfolio__block:last-child {
+    margin-bottom: 153px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Portfolio {
+    margin-left: 4.375vw;
+    margin-right: 4.375vw;
+  }
+
+  .Portfolio__about {
+    font-size: 14px;
+    margin-top: 72px;
+    margin-bottom: 44px;
+  }
+
+  .Portfolio__link {
     font-size: 18px;
-    font-weight: 400;
-    margin-bottom: 50px;
-}
-.Portfolio__block{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #E8E8E8;
-    margin-bottom: 20px;
-    text-decoration: none;
-}
+    letter-spacing: -0.04em;
+    padding-bottom: 0;
+    margin-bottom: 23px;
+  }
 
-.Portfolio__block:last-child{
-    border-bottom: 0;
-    margin-bottom: 125px;
-}
+  .Portfolio__arrow {
+    font-size: 18px;
+    margin-bottom: 23px;
+  }
 
-.Portfolio__link{
-    margin-top: 0;
-    margin-bottom: 19px;
-    font-size: 30px;
-    font-weight: 400;
-    color: #000;
+  .Portfolio__block {
+    margin-bottom: 24px;
+  }
 
-}
-
-.Portfolio__arrow{
-    margin-top: 0;
-    margin-bottom: 19px;
-    font-size: 30px;
-    font-weight: 400;
-    color: #000;
+  .Portfolio__block:last-child {
+    margin-bottom: 130px;
+  }
 }
