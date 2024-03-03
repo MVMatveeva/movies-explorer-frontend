@@ -38,7 +38,7 @@ function Profile() {
   };
 
   return (
-    <div className="Profile">
+    <section className="Profile">
       <h2 className="Profile__hello">Привет, Виталий!</h2>
       <form className="Profile__form">
         <fieldset className="Profile__fieldset">
@@ -83,7 +83,7 @@ function Profile() {
 
         </div>
       </form>
-    </div>
+    </section>
   );
 }
 

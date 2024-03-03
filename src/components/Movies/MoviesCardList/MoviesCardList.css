@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.Movies__li{
+  list-style-type: none;
+}
+
 .MoviesCardList__list {
   display: grid;
   grid-template-columns: repeat(3, 27.907vw);
@@ -30,7 +34,7 @@
 @media screen and (max-width: 768px) {
   .MoviesCardList__list {
     grid-template-columns: repeat(2, 44.1406vw);
-    gap: 47px 30px;
+    gap: 6.1198vw 3.9063vw;
     margin-left: 3.9063vw;
     margin-right: 3.9063vw;
   }

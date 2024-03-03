@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function AboutMe() {
   return (
-    <div className="AboutMe" id="AboutMe">
+    <section className="AboutMe" id="AboutMe">
       {/*компонент с информацией о студенте*/}
       <h2 className="AboutMe__about">Студент</h2>
       <div className="AboutMe__block">
@@ -26,7 +26,7 @@ function AboutMe() {
           alt="Фотография профиля"
         />
       </div>
-    </div>
+    </section>
   );
 }
 

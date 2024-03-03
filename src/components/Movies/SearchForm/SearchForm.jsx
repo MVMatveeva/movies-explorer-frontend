@@ -8,7 +8,7 @@ function SearchForm() {
     setIsChecked(!isChecked);
   };
   return (
-    <div className="SearchForm">
+    <section className="SearchForm">
       <form className="SearchForm__form" name="SearchForm">
         <div className="SearchForm__block-input">
           <div className="SearchForm__search">
@@ -35,7 +35,7 @@ function SearchForm() {
           <p className="SearchForm__filter">Короткометражки</p>
         </div>
       </form>
-    </div>
+    </section>
   );
 }
 

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Login() {
   return (
-    <div className="Login">
+    <section className="Login">
       <div className="Login__header">
         <img className="Login__logo" src={logo} alt="Лого" />
         <h2 className="Login__heading">Рады видеть!</h2>
@@ -32,7 +32,7 @@ function Login() {
         Регистрация
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
 

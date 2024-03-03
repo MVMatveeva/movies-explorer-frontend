@@ -92,13 +92,24 @@
 }
 
 @media screen and (max-width: 571px) {
-  .Techs__table {
-    display: grid;
-    grid-template-columns: repeat(4, 10.9375vw);
-    row-gap: 10px;
+   .Techs__text {
+    font-size: 11px;
+    width: 91.2500vw;
+    line-height: 16px;
+    margin-bottom: 51px;
   }
-  .Techs__cell {
-    font-size: 2.1053vw;
+
+  .Techs__table{
+    display: grid;
+    grid-template-columns: repeat(2, 26.25vw);
+    gap: 10px 10px;
+    margin-bottom: 52px;
+  }
+
+  .Techs__cell{
+    width: 26.25vw;
+    height: 17.8125vw;
+    font-size: 12px;
   }
 }
 
@@ -121,20 +132,5 @@
     font-size: 30px;
     margin-bottom: 25px;
   }
-  .Techs__text {
-    font-size: 11px;
-    width: 91.2500vw;
-    line-height: 16px;
-    margin-bottom: 51px;
-  }
-
-  .Techs__table{
-    grid-template-columns: repeat(2, 26.25vw);
-    margin-bottom: 52px;
-  }
-
-  .Techs__cell{
-    width: 26.25vw;
-    font-size: 12px;
-  }
+ 
 }

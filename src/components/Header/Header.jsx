@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../images/header_logo.svg";
-import profile from "../../images/profile.svg";
 import exit from "../../images/Exit.svg";
 import profileBlack from "../../images/header-logo-black.svg";
 
 function Header(props) {
 
   return (
-    <div className="Header" style={{ backgroundColor: props.backgroundColor }}>
-      <img className="Header__logo" src={logo} alt="logo" />
+    <header className="Header" style={{ backgroundColor: props.backgroundColor }}>
+      <Link className="Header__logo-link" to="/"><img className="Header__logo" src={logo} alt="logo" /></Link>
       <nav className="Navigation">
         {/*{props.loggedIn ? (*/}
         <div className="Navigation__desktop">
@@ -41,24 +40,24 @@ function Header(props) {
               <img className="Navigation__exit-img" src={exit} alt="Закрыть" />
             </button>
             <div className="Navigation__hamburger-menu">
-            <ul className="Navigation__hamburger-ul">
-              <li className="Navigation__hamburger-li"><Link className="Navigation__hamburger-link" to="/">Главная</Link></li>
-              <li className="Navigation__hamburger-li"><Link className="Navigation__hamburger-link" to="/movies">Фильмы</Link></li>
-              <li className="Navigation__hamburger-li"><Link className="Navigation__hamburger-link" to="/saved-movies">Сохраненные фильмы</Link></li>
-              <li className="Navigation__hamburger-li"><Link className="Navigation__hamburger-link" to="/profile">
-                <button className="Navigation__hamburger-button">
-                  Аккаунт
-                  <img
-                    className="Navigation__hamburger-account"
-                    src={profileBlack}
-                    alt="Profile"
-                  />
-                </button>
-              </Link>
-              </li>
-            </ul>
+              <ul className="Navigation__hamburger-ul">
+                <li className="Navigation__hamburger-li"><Link className="Navigation__hamburger-link" to="/">Главная</Link></li>
+                <li className="Navigation__hamburger-li"><Link className="Navigation__hamburger-link" to="/movies">Фильмы</Link></li>
+                <li className="Navigation__hamburger-li"><Link className="Navigation__hamburger-link" to="/saved-movies">Сохраненные фильмы</Link></li>
+                <li className="Navigation__hamburger-li"><Link className="Navigation__hamburger-link" to="/profile">
+                  <button className="Navigation__hamburger-button">
+                    Аккаунт
+                    <img
+                      className="Navigation__hamburger-account"
+                      src={profileBlack}
+                      alt="Profile"
+                    />
+                  </button>
+                </Link>
+                </li>
+              </ul>
             </div>
-            </div>
+          </div>
           }
         </div>
         {/* ) : (
@@ -72,7 +71,7 @@ function Header(props) {
           </>
      )}*/}
       </nav >
-    </div >
+    </header >
   );
 }
 

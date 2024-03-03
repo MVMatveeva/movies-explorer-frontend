@@ -54,6 +54,7 @@
   font-weight: 500;
   padding: 13px 0 15px;
   margin-top: 65px;
+  border: 0;
 }
 
 .Register__sign {
@@ -141,7 +142,16 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 420px) {
+  .Register__sign-text {
+    font-size: 12px;
+  }
+  .Register__sign-link {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 360px) {
   .Register {
     margin-left: 9.375vw;
     margin-right: 9.375vw;
@@ -167,13 +177,6 @@
   .Register__button {
     margin-top: 157px;
     width: 81.25vw;
-  }
-
-  .Register__sign-text {
-    font-size: 12px;
-  }
-  .Register__sign-link {
-    font-size: 12px;
   }
 
   .Register__error {

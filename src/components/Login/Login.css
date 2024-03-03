@@ -115,50 +115,51 @@
   }
 }
 
-@media screen and (max-width: 320px) {
-    .Login {
-      margin-left: 9.375vw;
-      margin-right: 9.375vw;
-      margin-top: 57px;
-    }
-  
-    .Login__header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 82px;
-    }
-  
-    .Login__heading {
-      margin-top: 49px;
-    }
-  
-    .Login__input {
-      width: 72.1875vw;
-      margin-bottom: 18px;
-    }
-  
-    .Login__button {
-      margin-top: 243px;
-      width: 81.25vw;
-    }
-  
-    .Login__sign-text {
-      font-size: 12px;
-    }
-    .Login__sign-link {
-      font-size: 12px;
-    }
-  
-    .Login__error {
-      left: 9.375vw;
-    }
-  
-    .Login__error_email {
-      top: 325px;
-    }
-  
-    .Login__error_password {
-      top: 412px;
-    }
-    }
+@media screen and (max-width: 551px) {
+  .Login__sign-text {
+    font-size: 12px;
+  }
+  .Login__sign-link {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .Login {
+    margin-left: 9.375vw;
+    margin-right: 9.375vw;
+    margin-top: 57px;
+  }
+
+  .Login__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 82px;
+  }
+
+  .Login__heading {
+    margin-top: 49px;
+  }
+
+  .Login__input {
+    width: 72.1875vw;
+    margin-bottom: 18px;
+  }
+
+  .Login__button {
+    margin-top: 243px;
+    width: 81.25vw;
+  }
+
+  .Login__error {
+    left: 9.375vw;
+  }
+
+  .Login__error_email {
+    top: 325px;
+  }
+
+  .Login__error_password {
+    top: 412px;
+  }
+}

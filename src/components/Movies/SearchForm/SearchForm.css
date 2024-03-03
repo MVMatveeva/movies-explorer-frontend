@@ -47,6 +47,7 @@
   height: 34px;
   padding: 7px 10.35px 8px;
   cursor: pointer;
+  border: 0;
 }
 
 .SearchForm__button:hover {

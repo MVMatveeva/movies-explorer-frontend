@@ -21,7 +21,7 @@ function MoviesCard() {
   }
 
   return (
-    <div className="MoviesCard">
+    <section className="MoviesCard">
       <img className="MoviesCard__image" src={Image} alt="Изображение" />
       {isSaved ? (
         <button className="MoviesCard__button MoviesCard__button_delete">
@@ -34,7 +34,7 @@ function MoviesCard() {
         <p className="MoviesCard__name">33 слова о дизайне</p>
         <p className="MoviesCard__time">1ч 17м</p>
       </div>
-    </div>
+    </section>
   );
 }
 

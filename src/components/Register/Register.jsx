@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Register() {
   return (
-    <div className="Register">
+    <section className="Register">
       <div className="Register__header">
         <img className="Register__logo" src={logo} alt="Лого" />
         <h2 className="Register__heading">Добро пожаловать!</h2>
@@ -37,7 +37,7 @@ function Register() {
           Войти
         </Link>
       </div>
-    </div>
+    </section>
   );
 }
 

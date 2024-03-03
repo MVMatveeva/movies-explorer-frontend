@@ -3,24 +3,23 @@ import MoviesCard from "../MoviesCard/MoviesCard";
 
 function MoviesCardList() {
   return (
-    <div className="MoviesCardList">
+    <section className="MoviesCardList">
       <ul className="MoviesCardList__list">
-        <li><MoviesCard /></li>
-        <li><MoviesCard /></li>
-        <li><MoviesCard /></li>
-        <li><MoviesCard /></li>
-        <li><MoviesCard /></li>
-        <li><MoviesCard /></li>
-        <li><MoviesCard /></li>
-        <li><MoviesCard /></li>
-        <li><MoviesCard /></li>
-        <li><MoviesCard /></li>
-        <li><MoviesCard /></li>
-        <li><MoviesCard /></li>
-        <li><MoviesCard /></li>        
+        <li className="Movies__li"><MoviesCard /></li>
+        <li className="Movies__li"><MoviesCard /></li>
+        <li className="Movies__li"><MoviesCard /></li>
+        <li className="Movies__li"><MoviesCard /></li>
+        <li className="Movies__li"><MoviesCard /></li>
+        <li className="Movies__li"><MoviesCard /></li>
+        <li className="Movies__li"><MoviesCard /></li>
+        <li className="Movies__li"><MoviesCard /></li>
+        <li className="Movies__li"><MoviesCard /></li>
+        <li className="Movies__li"><MoviesCard /></li>
+        <li className="Movies__li"><MoviesCard /></li>
+        <li className="Movies__li"><MoviesCard /></li>      
       </ul>
       <button className="MoviesCardList__button">Еще</button>
-    </div>
+    </section>
   );
 }
 
