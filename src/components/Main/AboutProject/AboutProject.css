@@ -116,7 +116,7 @@
 
   .AboutProject__block {
     grid-template-columns: 88.75vw;
-    grid-template-rows: repeat(2, 32p5);
+    grid-template-rows: repeat(2, 32px);
     gap: 0;
     margin-left: 5.625vw;
     margin-right: 5.625vw;
