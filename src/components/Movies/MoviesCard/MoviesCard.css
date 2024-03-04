@@ -127,7 +127,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
   .MoviesCard__image {
     width: 93.75vw;
   }

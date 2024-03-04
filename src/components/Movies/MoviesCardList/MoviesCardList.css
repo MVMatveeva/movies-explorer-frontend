@@ -50,7 +50,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
   .MoviesCardList__list {
     grid-template-columns: 93.75vw;
     margin-top: 50px;

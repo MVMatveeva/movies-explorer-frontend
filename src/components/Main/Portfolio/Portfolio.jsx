@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Portfolio() {
   return (
-    <section className="Portfolio">
+    <nav className="Portfolio">
       {/*компонент со ссылками на другие проекты*/}
       <h2 className="Portfolio__about">Портфолио</h2>
       <div className="Portfolio__blocks">
@@ -20,7 +20,7 @@ function Portfolio() {
           <p className="Portfolio__arrow">&#8599;</p>
         </Link>
       </div>
-    </section>
+    </nav>
   );
 }
 

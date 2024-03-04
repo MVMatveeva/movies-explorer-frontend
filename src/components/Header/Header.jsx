@@ -11,7 +11,7 @@ function Header(props) {
       <Link className="Header__logo-link" to="/"><img className="Header__logo" src={logo} alt="logo" /></Link>
       <nav className="Navigation">
         {/*{props.loggedIn ? (*/}
-        <div className="Navigation__desktop">
+        <nav className="Navigation__desktop">
           <Link className="Header__film" to="/movies">
             Фильмы
           </Link>
@@ -28,14 +28,14 @@ function Header(props) {
               />
             </button>
           </Link>
-        </div>
+        </nav>
         <div className="Hamburger">
           <button className="Hamburger__opening" onClick={props.menuOpen} style={{ backgroundColor: props.backgroundColor }}>
             <span className="Line"></span>
             <span className="Line"></span>
             <span className="Line"></span>
           </button>
-          {props.hamburgerOpen && <div className="Navigation__hamburger">
+          {props.hamburgerOpen && <nav className="Navigation__hamburger">
             <button className="Navigation__hamburger-exit" onClick={props.onClose}>
               <img className="Navigation__exit-img" src={exit} alt="Закрыть" />
             </button>
@@ -57,7 +57,7 @@ function Header(props) {
                 </li>
               </ul>
             </div>
-          </div>
+          </nav>
           }
         </div>
         {/* ) : (

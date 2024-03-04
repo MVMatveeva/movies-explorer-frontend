@@ -84,7 +84,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 560px) {
 .AboutMe__about{
   font-size: 18px;
   margin: 90px 14px 61px;
