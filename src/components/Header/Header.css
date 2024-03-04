@@ -97,13 +97,6 @@
   margin-left: 28px;
   padding: 8px 20px 8px;
   border: 0;
-}
-
-.Header__enter:hover {
-  opacity: 70%;
-}
-
-.Header__enter-button {
   font-size: 12px;
   font-weight: 500;
   color: #fff;
@@ -111,9 +104,10 @@
   border: 0;
 }
 
-.Header__enter-button:hover {
+.Header__enter:hover {
   opacity: 70%;
 }
+
 
 .Hamburger {
   display: none;
@@ -273,13 +267,11 @@
     margin-right: 15px;
   }
 
-  .Header__enter-button {
-    font-size: 10px;
-  }
 
   .Header__enter {
     padding: 5px 6px 5px;
     margin-left: 14px;
+    font-size: 10px;
   }
 
   .Header__register {

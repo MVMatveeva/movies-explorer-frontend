@@ -64,7 +64,7 @@ function Header(props) {
               Регистрация
             </Link>
             <Link className="Header__enter" to="/signin">
-              <button className="Header__enter-button">Войти</button>
+Войти
             </Link>
           </>
      )}*/}
