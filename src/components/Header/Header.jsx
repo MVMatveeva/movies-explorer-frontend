@@ -19,12 +19,12 @@ function Header(props) {
             Сохраненные фильмы
           </Link>
           <Link className="Header__button" to="/profile" style={{ backgroundColor: props.backgroundColor }}>
-              Аккаунт
-              <img
-                className="Header__button-img"
-                src={props.profile}
-                alt="Profile"
-              />
+            Аккаунт
+            <img
+              className="Header__button-img"
+              src={props.profile}
+              alt="Profile"
+            />
           </Link>
         </nav>
         <div className="Hamburger">
@@ -64,7 +64,7 @@ function Header(props) {
               Регистрация
             </Link>
             <Link className="Header__enter" to="/signin">
-Войти
+              Войти
             </Link>
           </>
      )}*/}
