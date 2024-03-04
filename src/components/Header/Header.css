@@ -11,33 +11,15 @@
   margin-left: 70px;
 }
 
-.Header__button-account {
-  padding: 0;
-  margin-top: 21px;
-  margin-bottom: 23px;
-  display: flex;
-  background-color: #f3c1f8;
-  align-items: center;
-  margin-left: 49px;
-  font-weight: 500;
-  font-size: 16px;
-  border: 0;
-  letter-spacing: -0.05em;
-}
-
-.Header__button-account:hover {
-  opacity: 70%;
-}
-
 .Header__button-img {
-  margin-left: 21px;
+  margin-left: 14px;
+  border-radius: 6px;
 }
 
 .Navigation__desktop {
   display: flex;
   align-items: center;
-  margin-right: 80px;
-  margin-top: 5px;
+  margin-right: 67px;
 }
 
 .Header__film-saved {
@@ -88,6 +70,21 @@
 .Header__button {
   color: #000;
   text-decoration: none;
+  padding: 0;
+  margin-top: 21px;
+  margin-bottom: 23px;
+  display: flex;
+  background-color: #f3c1f8;
+  align-items: center;
+  margin-left: 49px;
+  font-weight: 500;
+  font-size: 16px;
+  border: 0;
+  letter-spacing: -0.05em;
+}
+
+.Header__button:hover{
+  opacity: 0.7;
 }
 
 .Header__enter {

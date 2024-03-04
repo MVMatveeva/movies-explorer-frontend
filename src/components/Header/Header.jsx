@@ -18,15 +18,13 @@ function Header(props) {
           <Link className="Header__film-saved" to="/saved-movies">
             Сохраненные фильмы
           </Link>
-          <Link className="Header__button" to="/profile">
-            <button className="Header__button-account" style={{ backgroundColor: props.backgroundColor }}>
+          <Link className="Header__button" to="/profile" style={{ backgroundColor: props.backgroundColor }}>
               Аккаунт
               <img
                 className="Header__button-img"
                 src={props.profile}
                 alt="Profile"
               />
-            </button>
           </Link>
         </nav>
         <div className="Hamburger">
