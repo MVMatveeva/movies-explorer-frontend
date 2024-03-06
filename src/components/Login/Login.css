@@ -1,0 +1,166 @@
+.Login {
+  margin-left: 34.5313vw;
+  margin-right: 34.5313vw;
+  margin-top: 70px;
+}
+
+.Login__header {
+  margin-bottom: 40px;
+}
+
+.Login__heading {
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.Login__form {
+  border: 0;
+}
+
+.Login__fieldset {
+  border: 0;
+  padding: 0;
+}
+
+.Login__input {
+  border: 0;
+  width: 28.5938vw;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.Login__text {
+  font-size: 10px;
+  font-weight: 400;
+  color: #a0a0a0;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.Login__button {
+  width: 30.9375vw;
+  background-color: #000;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 13px 0 15px;
+  margin-top: 154px;
+  border: 0;
+}
+
+.Login__sign {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.Login__sign-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #a0a0a0;
+}
+
+.Login__sign-link {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 6px;
+  color: #000;
+  text-decoration: none;
+}
+
+.Login__error {
+  font-size: 10px;
+  font-weight: 400;
+  color: #ff4062;
+  position: absolute;
+  left: 34.5313vw;
+}
+
+.Login__error_email {
+  top: 290px;
+}
+
+.Login__error_password {
+  top: 380px;
+}
+
+@media screen and (max-width: 768px) {
+  .Login {
+    margin-left: 24.2188vw;
+    margin-right: 24.2188vw;
+    margin-top: 229px;
+  }
+
+  .Login__input {
+    width: 47.3958vw;
+  }
+  .Login__button {
+    width: 51.5625vw;
+  }
+
+  .Login__error_email {
+    top: 450px;
+  }
+
+  .Login__error_password {
+    top: 540px;
+  }
+  .Login__error {
+    left: 24.2188vw;
+  }
+}
+
+@media screen and (max-width: 551px) {
+  .Login__sign-text {
+    font-size: 12px;
+  }
+  .Login__sign-link {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .Login {
+    margin-left: 9.375vw;
+    margin-right: 9.375vw;
+    margin-top: 57px;
+  }
+
+  .Login__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 82px;
+  }
+
+  .Login__heading {
+    margin-top: 49px;
+  }
+
+  .Login__input {
+    width: 72.1875vw;
+    margin-bottom: 18px;
+  }
+
+  .Login__button {
+    margin-top: 243px;
+    width: 81.25vw;
+  }
+
+  .Login__error {
+    left: 9.375vw;
+  }
+
+  .Login__error_email {
+    top: 325px;
+  }
+
+  .Login__error_password {
+    top: 412px;
+  }
+}

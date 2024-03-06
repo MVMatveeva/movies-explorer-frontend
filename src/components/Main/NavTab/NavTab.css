@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     column-gap: 40px;
+    height: 66px;
 }
 
 .NavTab__navigation {
@@ -11,4 +12,22 @@
     font-size: 13px;
     line-height: 16px;
     text-decoration: underline;
+    margin-top: 27px;
+    cursor: pointer;
 }
+
+.NavTab__navigation:hover{
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 320px) {
+    .NavTab{
+        column-gap: 24px;
+    }
+    
+    .NavTab__navigation{
+        font-size: 11px;
+        margin-top: 25px;
+    }
+  }
+

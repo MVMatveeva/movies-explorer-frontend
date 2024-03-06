@@ -2,7 +2,7 @@ import React from "react";
 
 function AboutProject() {
   return (
-    <div className="AboutProject">
+    <section className="AboutProject" id="AboutProject">
       {/* компонент с описанием дипломного проекта*/}
       <h2 className="AboutProject__about">О проекте</h2>
       <div className="AboutProject__block">
@@ -27,7 +27,7 @@ function AboutProject() {
         <p className="AboutProject__weeks-text">Back-end</p>
         <p className="AboutProject__weeks-text">Front-end</p>
       </div>
-    </div>
+    </section>
   );
 }
 export default AboutProject;

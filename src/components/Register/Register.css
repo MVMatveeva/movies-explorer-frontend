@@ -1,0 +1,197 @@
+.Register {
+  margin-left: 34.5313vw;
+  margin-right: 34.5313vw;
+  margin-top: 70px;
+}
+
+.Register__header {
+  margin-bottom: 40px;
+}
+
+.Register__heading {
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.Register__form {
+  border: 0;
+}
+
+.Register__fieldset {
+  border: 0;
+  padding: 0;
+}
+
+.Register__input {
+  border: 0;
+  width: 366px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.Register__input:last-child {
+  margin-bottom: 91px;
+}
+
+.Register__text {
+  font-size: 10px;
+  font-weight: 400;
+  color: #a0a0a0;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.Register__button {
+  width: 396px;
+  background-color: #000;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 13px 0 15px;
+  margin-top: 65px;
+  border: 0;
+}
+
+.Register__sign {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.Register__sign-text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #a0a0a0;
+}
+
+.Register__sign-link {
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 6px;
+  color: #000;
+  text-decoration: none;
+}
+
+.Register__error {
+  font-size: 10px;
+  font-weight: 400;
+  color: #ff4062;
+  position: absolute;
+  left: 34.5313vw;
+}
+
+.Register__error_name {
+  top: 290px;
+}
+
+.Register__error_email {
+  top: 380px;
+}
+
+.Register__error_password {
+  top: 477px;
+}
+
+@media screen and (max-width: 768px) {
+  .Register {
+    margin-left: 24.2188vw;
+    margin-right: 24.2188vw;
+    margin-top: 229px;
+  }
+
+  .Register__error {
+    left: 24.2188vw;
+  }
+
+  .Register__error_password {
+    top: 635px;
+  }
+
+  .Register__error_name {
+    top: 450px;
+  }
+
+  .Register__error_email {
+    top: 540px;
+  }
+  .Register__input {
+    width: 51.5625vw;
+  }
+  .Register__button {
+    width: 51.5625vw;
+  }
+}
+
+@media screen and (max-width: 452px) {
+  .Register__error_password {
+    top: 660px;
+  }
+
+  .Register__error_email {
+    top: 566px;
+  }
+
+  .Register__error_name {
+    top: 478px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .Register__sign-text {
+    font-size: 12px;
+  }
+  .Register__sign-link {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .Register {
+    margin-left: 9.375vw;
+    margin-right: 9.375vw;
+    margin-top: 57px;
+  }
+
+  .Register__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 82px;
+  }
+
+  .Register__heading {
+    margin-top: 49px;
+  }
+
+  .Register__input {
+    width: 72.1875vw;
+    margin-bottom: 18px;
+  }
+
+  .Register__button {
+    margin-top: 157px;
+    width: 81.25vw;
+  }
+
+  .Register__error {
+    left: 9.375vw;
+  }
+
+  .Register__error_name {
+    top: 325px;
+  }
+
+  .Register__error_email {
+    top: 412px;
+  }
+
+  .Register__error_password {
+    top: 509px;
+  }
+}
