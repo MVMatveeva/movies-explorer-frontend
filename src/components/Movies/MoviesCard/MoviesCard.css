@@ -3,8 +3,6 @@
   cursor: pointer;
 }
 
-
-
 .MoviesCard__button_save {
   border-radius: 30px;
   left: 21.4063vw;
@@ -19,10 +17,6 @@
 }
 
 .MoviesCard__image:hover .MoviesCard__button_save {
-  opacity: 1;
-}
-
-.MoviesCard__image:hover .MoviesCard__button_delete {
   opacity: 1;
 }
 
@@ -59,14 +53,14 @@
   width: 1.6406vw;
   height: 1.6406vw;
   justify-content: center;
-  opacity: 0;
+  opacity: 1;
 }
 
 .MoviesCard__button_delete:hover {
   opacity: 1;
 }
 .MoviesCard__button_save:hover {
-  opacity: 1;
+  opacity: .7;
 }
 
 .MoviesCard__block {
@@ -95,11 +89,13 @@
 
 .MoviesCard__image {
   width: 27.907vw;
+  height: 15.7031vw;
 }
 
 @media screen and (max-width: 768px) {
   .MoviesCard__image {
     width: 44.1406vw;
+    height: 24.7396vw;
   }
 
   .MoviesCard__block {
@@ -130,6 +126,7 @@
 @media screen and (max-width: 400px) {
   .MoviesCard__image {
     width: 93.75vw;
+    height: 52.5vw;
   }
 
   .MoviesCard__name {

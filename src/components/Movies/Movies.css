@@ -1,16 +1,29 @@
 .Movies {
     margin-top: 68px;
 }
+.Movies__error{
+    font-size: 40px;
+    color: #ff0000;
+    display: flex;
+    justify-content: center;
+}
 
 @media screen and (max-width: 768px) {
     .Movies {
         margin-top: 80px;
+    }
+    .Movies__error{
+        font-size: 20px;
     }
 }
 
 @media screen and (max-width: 320px) {
     .Movies {
         margin-top: 63px;
+    }
+
+    .Movies__error{
+        font-size: 10px;
     }
 }
 
