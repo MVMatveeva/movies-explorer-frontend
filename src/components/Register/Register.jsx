@@ -17,13 +17,11 @@ function Register({ onRegister }) {
 
 
   function validateForm() {
-    let validation = true;
-
     if (nameError || emailError || passwordError || !name || !email || !password) {
-      validation = false;
+      setIsValid(false);
+    } else {
+      setIsValid(true);
     }
-
-    return validation;
   }
 
   function handleName(evt) {
