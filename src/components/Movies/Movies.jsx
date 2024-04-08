@@ -4,13 +4,13 @@ import MoviesCardList from "./MoviesCardList/MoviesCardList";
 import Preloader from "./Preloader/Preloader";
 import * as MoviesApi from "../../utils/MoviesApi";
 
-
 function Movies({ savedMovies, onAdd, onDelete }) {
   const [moviesList, setMoviesList] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
   const [isChecked, setIsChecked] = useState(false);
   const [preloader, setPreloader] = useState(false);
   const [error, setError] = useState(false);
+  const [showSearchResults, setShowSearchResults] = useState(false)
 
   useEffect(() => {
     const savedValue = localStorage.getItem("shortMovie");
@@ -32,6 +32,18 @@ function Movies({ savedMovies, onAdd, onDelete }) {
       }
     }
   }, []);
+
+  useEffect(() => {
+    if (localStorage.getItem('searchMovies')) {
+        if (filteredMovies.length === 0) {
+            setShowSearchResults(true);
+        } else {
+          setShowSearchResults(false);
+        }
+    } else {
+      setShowSearchResults(false);
+    }
+}, [filteredMovies]);
 
 
   function handleFilterMovie(data, search) {
@@ -56,7 +68,7 @@ function Movies({ savedMovies, onAdd, onDelete }) {
       setFilteredMovies(filteredResults);
     }
 
-    localStorage.setItem("moviesFilter", JSON.stringify(filteredResults));
+    localStorage.setItem("findMovie", JSON.stringify(filteredResults));
     localStorage.setItem("allMovies", JSON.stringify(data));
   }
 
@@ -73,6 +85,7 @@ function Movies({ savedMovies, onAdd, onDelete }) {
       MoviesApi.getMovies()
         .then((movieData) => {
           updateMovieResults(movieData, search, isChecked);
+          setShowSearchResults(false)
         })
         .catch(() => {
           setError("Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз")
@@ -108,7 +121,7 @@ function Movies({ savedMovies, onAdd, onDelete }) {
       {preloader && <Preloader />}
       {error && <p className="Movies__error">{error}</p>}
       {!preloader && filteredMovies.length === 0 && <p className="Movies__error">Ничего не найдено</p>}
-      {filteredMovies.length > 0 &&
+      {filteredMovies.length > 0 && 
         <MoviesCardList
           moviesList={filteredMovies}
           onAdd={onAdd}
