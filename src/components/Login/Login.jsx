@@ -54,7 +54,9 @@ function Login({ onLogin }) {
   return (
     <section className="Login">
       <div className="Login__header">
+        <Link className="Login__logo-link" to="/">
         <img className="Login__logo" src={logo} alt="Лого" />
+        </Link>
         <h2 className="Login__heading">Рады видеть!</h2>
       </div>
       <form className="Login__form" onSubmit={handleSubmit}>

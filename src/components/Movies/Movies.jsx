@@ -4,6 +4,7 @@ import MoviesCardList from "./MoviesCardList/MoviesCardList";
 import Preloader from "./Preloader/Preloader";
 import * as MoviesApi from "../../utils/MoviesApi";
 
+
 function Movies({ savedMovies, onAdd, onDelete }) {
   const [moviesList, setMoviesList] = useState([]);
   const [filteredMovies, setFilteredMovies] = useState([]);
@@ -31,6 +32,7 @@ function Movies({ savedMovies, onAdd, onDelete }) {
       }
     }
   }, []);
+
 
   function handleFilterMovie(data, search) {
     const searchLower = search.toLowerCase();

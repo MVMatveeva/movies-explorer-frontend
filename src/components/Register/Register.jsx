@@ -18,11 +18,11 @@ function Register({ onRegister }) {
 
   function validateForm() {
     let validation = true;
-  
+
     if (nameError || emailError || passwordError || !name || !email || !password) {
       validation = false;
     }
-  
+
     return validation;
   }
 
@@ -77,7 +77,9 @@ function Register({ onRegister }) {
   return (
     <section className="Register">
       <div className="Register__header">
-        <img className="Register__logo" src={logo} alt="Лого" />
+        <Link className="Register__logo-link" to="/">
+          <img className="Register__logo" src={logo} alt="Лого" />
+        </Link>
         <h2 className="Register__heading">Добро пожаловать!</h2>
       </div>
       <form className="Register__form" onSubmit={handleSubmit}>
