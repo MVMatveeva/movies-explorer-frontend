@@ -67,9 +67,7 @@ function Register({ onRegister }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (validateForm()) {
-      onRegister(name, email, password);
-    }
+    onRegister(name, email, password);
   }
 
   return (

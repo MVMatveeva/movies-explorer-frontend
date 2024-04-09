@@ -17,7 +17,7 @@ export const registerUser = (name, email, password) => {
     },
     body: JSON.stringify({ email: email, password: password, name: name }),
   }).then(handleResponse);
-};
+}
 
 export const loginUser = (email, password) => {
   return fetch(`${BASE_URL}/signin`, {

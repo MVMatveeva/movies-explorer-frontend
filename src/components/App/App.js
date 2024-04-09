@@ -143,9 +143,10 @@ function App() {
       .then((res) => {
         setCurrentUser(res);
       })
-      .catch((err) => {
+      .catch(() => {
         setPopupRegisterTitle("Что-то пошло не так! Попробуйте ещё раз.");
-      });
+        handleInfoTooltip(true);
+      })
   };
 
   const handleAddMovie = (data) => {
@@ -180,7 +181,7 @@ function App() {
     localStorage.removeItem("jwt");
     localStorage.removeItem("loggedIn");
     navigate("/signin");
-  }
+  };
 
   const handleInfoTooltip = () => {
     setInfoTooltip(true);
