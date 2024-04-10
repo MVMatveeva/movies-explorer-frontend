@@ -73,6 +73,7 @@ function Movies({ savedMovies, onAdd, onDelete }) {
   }
 
   function handleFindMovies(search) {
+    setPreloader(true);
     localStorage.setItem("searchMovies", search);
     localStorage.setItem("shortMovie", JSON.stringify(isChecked));
 
