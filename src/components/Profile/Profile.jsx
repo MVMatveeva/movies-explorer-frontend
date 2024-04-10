@@ -8,6 +8,7 @@ function Profile({ onUpdateUser, onClick }) {
   const [edit, setEdit] = useState(false);
   const [buttonDisabled, setButtonDisabled] = useState(true);
   const [error, setError] = useState(false);
+  const [isEdited, setIsEdited] = useState(false);
   const [updateInput, setUpdateInput] = useState(false);
   const [isValid, setIsValid] = useState(false);
   const [nameError, setNameError] = useState("");
@@ -29,12 +30,15 @@ function Profile({ onUpdateUser, onClick }) {
   function handleEditName(e) {
     setName(e.target.value);
     setUpdateInput(true);
+    setIsEdited(true);
   }
 
   function handleEditEmail(e) {
     setEmail(e.target.value);
     setUpdateInput(true);
+    setIsEdited(true);
   }
+
   function inputValidation() {
     const isNameValid = !nameError && name && name !== CurrentUser.name;
     const isEmailValid = !emailError && email && email !== CurrentUser.email;
@@ -45,7 +49,9 @@ function Profile({ onUpdateUser, onClick }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setEdit(true);
-    onUpdateUser({ name: name, email: email })
+    if (isEdited) {
+      onUpdateUser({ name: name, email: email });
+    }
     setUpdateInput(false);
   };
 
@@ -79,7 +85,8 @@ function Profile({ onUpdateUser, onClick }) {
                 handleEditName(e);
                 handleInputEdit();
               }}
-              required />
+              required
+            />
             <span className="Profile__error Profile__error_name"></span>
           </div>
           <div className="Profile__block">
@@ -91,14 +98,15 @@ function Profile({ onUpdateUser, onClick }) {
                 handleEditEmail(e);
                 handleInputEdit();
               }}
-              required />
+              required
+            />
             <span className="Profile__error Profile__error_email"></span>
           </div>
         </fieldset>
         <div className="Profile__edit">
           {edit ? (
             <>
-              <button className={`Profile__save ${updateInput && !error ? "" : "Profile__save_disabled"}`} onClick={handleSaveClick} >
+              <button className={`Profile__save ${updateInput && !error ? "" : "Profile__save_disabled"}`} onClick={handleSaveClick}>
                 Сохранить
               </button>
               {error && <span className="Profile__error Profile__error_update">При обновлении профиля произошла ошибка.</span>}
@@ -113,7 +121,6 @@ function Profile({ onUpdateUser, onClick }) {
               </button>
             </>
           )}
-
         </div>
       </form>
     </section>

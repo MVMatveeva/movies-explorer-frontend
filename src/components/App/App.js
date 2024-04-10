@@ -142,11 +142,13 @@ function App() {
     MainApi.editUserInfo(name, email)
       .then((res) => {
         setCurrentUser(res);
+        setPopupRegisterTitle("Данные успешно обновлены");
+        handleInfoTooltip(true);
       })
       .catch(() => {
         setPopupRegisterTitle("Что-то пошло не так! Попробуйте ещё раз.");
         handleInfoTooltip(true);
-      })
+      });
   };
 
   const handleAddMovie = (data) => {
