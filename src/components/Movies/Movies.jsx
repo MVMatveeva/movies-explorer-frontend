@@ -18,7 +18,7 @@ function Movies({ savedMovies, onAdd, onDelete }) {
   }, []);
 
   useEffect(() => {
-    const storedMovie = localStorage.getItem("findMovie");
+    const storedMovie = localStorage.getItem("moviesFilter");
     const storedShortMovie = localStorage.getItem("shortMovie");
 
     if (storedMovie) {
@@ -34,7 +34,7 @@ function Movies({ savedMovies, onAdd, onDelete }) {
   }, []);
 
   useEffect(() => {
-    if (localStorage.getItem('searchMovies')) {
+    if (localStorage.getItem("searchMovies")) {
         if (filteredMovies.length === 0) {
             setShowSearchResults(true);
         } else {
@@ -68,7 +68,7 @@ function Movies({ savedMovies, onAdd, onDelete }) {
       setFilteredMovies(filteredResults);
     }
 
-    localStorage.setItem("findMovie", JSON.stringify(filteredResults));
+    localStorage.setItem("moviesFilter", JSON.stringify(filteredResults));
     localStorage.setItem("allMovies", JSON.stringify(data));
   }
 
@@ -122,7 +122,7 @@ function Movies({ savedMovies, onAdd, onDelete }) {
       {preloader && <Preloader />}
       {error && <p className="Movies__error">{error}</p>}
       {!preloader && filteredMovies.length === 0 && <p className="Movies__error">Ничего не найдено</p>}
-      {filteredMovies.length > 0 && 
+      {filteredMovies.length > 0 &&
         <MoviesCardList
           moviesList={filteredMovies}
           onAdd={onAdd}

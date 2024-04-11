@@ -40,7 +40,7 @@ function SearchForm({ findMovies, handleToggleCheckbox, isChecked }) {
               placeholder="Фильм"
               value={searchInput || ""}
               onChange={handleChangeInput}
-              minLength="2"
+              minLength="1"
               maxLength="30"
             />
             <span className="SearchForm__error">{error}</span>

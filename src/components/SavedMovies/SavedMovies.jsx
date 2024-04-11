@@ -44,7 +44,7 @@ function SavedMovies({ savedMovies, onDelete }) {
   return (
     <section>
       <SearchForm findMovies={handleFindMovies}
-        toggleCheckBox={handleToggleCheckbox}
+        handleToggleCheckbox={handleToggleCheckbox}
         isChecked={isChecked}
       />
 
