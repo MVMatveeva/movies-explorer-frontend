@@ -132,10 +132,8 @@ function App() {
       })
       .catch(() => {
         setPopupRegisterTitle("Что-то пошло не так! Попробуйте ещё раз.");
-      })
-      .finally(() => {
         handleInfoTooltip(true);
-      });
+      })
   };
 
   const handleUpdateUser = ({ name, email }) => {
