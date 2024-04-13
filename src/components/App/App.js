@@ -128,12 +128,14 @@ function App() {
       .then((res) => {
         localStorage.setItem("jwt", res.token);
         setLoggedIn(true);
+        localStorage.removeItem("searchMovies");
+        localStorage.removeItem("shortMovie");
         navigate("/movies");
       })
       .catch(() => {
         setPopupRegisterTitle("Что-то пошло не так! Попробуйте ещё раз.");
         handleInfoTooltip(true);
-      })
+      });
   };
 
   const handleUpdateUser = ({ name, email }) => {

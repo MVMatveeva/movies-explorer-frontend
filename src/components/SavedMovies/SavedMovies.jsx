@@ -7,7 +7,7 @@ function SavedMovies({ savedMovies, onDelete }) {
   const [savedMoviesList, setSavedMoviesList] = useState("");
   const [filteredMovies, setFilteredMovies] = useState(savedMovies);
   const [isChecked, setIsChecked] = useState(false);
-  const [showSearchResults, setShowSearchResults] = useState(false);
+  const [showSearchResults, setShowSearchResults] = useState(true);
 
   useEffect(() => {
     setShowSearchResults(filteredMovies.length === 0);
@@ -37,21 +37,28 @@ function SavedMovies({ savedMovies, onDelete }) {
   }
 
   function handleFindMovies(data) {
-    setSavedMoviesList(data)
+    setSavedMoviesList(data);
+    setShowSearchResults(false); 
   }
 
 
   return (
     <section>
-      <SearchForm findMovies={handleFindMovies}
+      <SearchForm 
+        findMovies={handleFindMovies}
         handleToggleCheckbox={handleToggleCheckbox}
         isChecked={isChecked}
       />
-
-      <MoviesCardList moviesList={filteredMovies}
-        savedMovies={savedMovies}
-        onDelete={onDelete}
-      />
+      {showSearchResults && savedMoviesList && (
+        <p className="Movies__error">Ничего не найдено</p>
+      )}
+      {!showSearchResults && (
+        <MoviesCardList 
+          moviesList={filteredMovies}
+          savedMovies={savedMovies}
+          onDelete={onDelete}
+        />
+      )}
     </section>
   )
 }

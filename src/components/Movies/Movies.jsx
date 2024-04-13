@@ -11,7 +11,8 @@ function Movies({ savedMovies, onAdd, onDelete }) {
   const [preloader, setPreloader] = useState(false);
   const [error, setError] = useState(false);
   const [showSearchResults, setShowSearchResults] = useState(false);
-  
+  const [firstVisit, setFirstVisit] = useState(true);
+
 
   useEffect(() => {
     const savedValue = localStorage.getItem("shortMovie");
@@ -32,20 +33,20 @@ function Movies({ savedMovies, onAdd, onDelete }) {
         setFilteredMovies(storedMovies);
       }
     }
-  }, [isChecked]); 
-  
+  }, [isChecked]);
+
 
   useEffect(() => {
-    if (localStorage.getItem("searchMovies")) {
-        if (filteredMovies.length === 0) {
-            setShowSearchResults(true);
-        } else {
-          setShowSearchResults(false);
-        }
+    if (!firstVisit && localStorage.getItem("searchMovies")) {
+      if (filteredMovies.length === 0) {
+        setShowSearchResults(true);
+      } else {
+        setShowSearchResults(false);
+      }
     } else {
       setShowSearchResults(false);
     }
-}, [filteredMovies]);
+  }, [filteredMovies, firstVisit]);
 
 
   function handleFilterMovie(data, search) {
@@ -84,18 +85,19 @@ function Movies({ savedMovies, onAdd, onDelete }) {
       const savedMovieData = JSON.parse(allMovies);
       updateMovieResults(savedMovieData, search, isChecked);
       setPreloader(false);
+      setFirstVisit(false); 
     } else {
       MoviesApi.getMovies()
         .then((movieData) => {
           updateMovieResults(movieData, search, isChecked);
-          setShowSearchResults(false)
+          setShowSearchResults(false);
+          setPreloader(false);
+          setFirstVisit(false); 
         })
         .catch(() => {
           setError("Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз")
-        })
-        .finally(() => {
           setPreloader(false)
-        });
+        })
     }
   }
 
@@ -113,7 +115,7 @@ function Movies({ savedMovies, onAdd, onDelete }) {
     localStorage.setItem("shortMovie", JSON.stringify(!isChecked).toString());
   };
 
-  
+
 
   return (
     <section>
@@ -124,14 +126,15 @@ function Movies({ savedMovies, onAdd, onDelete }) {
       />
       {preloader && <Preloader />}
       {error && <p className="Movies__error">{error}</p>}
-      {!preloader && filteredMovies.length === 0 && <p className="Movies__error">Ничего не найдено</p>}
-      {filteredMovies.length > 0 &&
+      {showSearchResults && !firstVisit ? (
+        <p className="Movies__error">Ничего не найдено</p>
+      ) : (
         <MoviesCardList
           moviesList={filteredMovies}
           onAdd={onAdd}
           savedMovies={savedMovies}
           onDelete={onDelete}
-        />}
+        />)}
     </section>
   )
 }
