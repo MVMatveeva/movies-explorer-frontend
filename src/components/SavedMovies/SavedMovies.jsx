@@ -7,11 +7,11 @@ function SavedMovies({ savedMovies, onDelete }) {
   const [savedMoviesList, setSavedMoviesList] = useState("");
   const [filteredMovies, setFilteredMovies] = useState(savedMovies);
   const [isChecked, setIsChecked] = useState(false);
+  const [showSearchResults, setShowSearchResults] = useState(false);
 
   useEffect(() => {
-    const savedValue = localStorage.getItem("shortMovie");
-    setIsChecked(savedValue === "true");
-  }, []);
+    setShowSearchResults(filteredMovies.length === 0);
+  }, [filteredMovies]);
 
   useEffect(() => {
     const filteredMovies = handleFilterMovie(savedMovies, savedMoviesList)

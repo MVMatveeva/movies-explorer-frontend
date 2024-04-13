@@ -13,6 +13,13 @@ function SearchForm({ findMovies, handleToggleCheckbox, isChecked }) {
       setSearchInput(searchMovies);
     }
   }, [location.pathname]);
+  
+  
+  useEffect(() => {
+    if (isChecked) {
+      findMovies(searchInput);
+    }
+  }, [isChecked]);
 
   function handleChangeInput(e) {
     setSearchInput(e.target.value)
@@ -27,12 +34,6 @@ function SearchForm({ findMovies, handleToggleCheckbox, isChecked }) {
       setError(false);
     }
   }
-
-  useEffect(() => {
-    if (isChecked) {
-      findMovies(searchInput);
-    }
-  }, [isChecked]);
 
   return (
     <section className="SearchForm">
