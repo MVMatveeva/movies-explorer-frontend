@@ -182,7 +182,7 @@ function App() {
     localStorage.clear();
     localStorage.removeItem("jwt");
     localStorage.removeItem("loggedIn");
-    navigate("/signin");
+    navigate("/");
   };
 
   const handleInfoTooltip = () => {
