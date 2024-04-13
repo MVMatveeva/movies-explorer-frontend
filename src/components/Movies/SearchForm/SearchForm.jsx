@@ -17,6 +17,7 @@ function SearchForm({ findMovies, handleToggleCheckbox, isChecked }) {
   function handleChangeInput(e) {
     setSearchInput(e.target.value)
   }
+
   function handleSubmit(e) {
     e.preventDefault();
     if (!searchInput) {
@@ -26,6 +27,12 @@ function SearchForm({ findMovies, handleToggleCheckbox, isChecked }) {
       setError(false);
     }
   }
+
+  useEffect(() => {
+    if (isChecked) {
+      findMovies(searchInput);
+    }
+  }, [isChecked]);
 
   return (
     <section className="SearchForm">
@@ -38,7 +45,7 @@ function SearchForm({ findMovies, handleToggleCheckbox, isChecked }) {
               type="text"
               name="Search"
               placeholder="Фильм"
-              value={searchInput || ""}
+              value={searchInput}
               onChange={handleChangeInput}
               minLength="1"
               maxLength="30"
@@ -49,13 +56,18 @@ function SearchForm({ findMovies, handleToggleCheckbox, isChecked }) {
             Найти
           </button>
         </div>
-        <div className="SearchForm__block-filter">
+        <form className="SearchForm__block-filter">
           <label className="SearchForm__switch">
-            <input type="checkbox" className="SearchForm__checkbox" checked={isChecked} onChange={handleToggleCheckbox} />
+            <input
+              type="checkbox"
+              className="SearchForm__checkbox"
+              checked={isChecked}
+              onChange={handleToggleCheckbox}
+            />
             <span className="slider round" />
           </label>
           <p className="SearchForm__filter">Короткометражки</p>
-        </div>
+        </form>
       </form>
     </section>
   );

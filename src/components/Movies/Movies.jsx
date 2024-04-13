@@ -10,7 +10,8 @@ function Movies({ savedMovies, onAdd, onDelete }) {
   const [isChecked, setIsChecked] = useState(false);
   const [preloader, setPreloader] = useState(false);
   const [error, setError] = useState(false);
-  const [showSearchResults, setShowSearchResults] = useState(false)
+  const [showSearchResults, setShowSearchResults] = useState(false);
+  
 
   useEffect(() => {
     const savedValue = localStorage.getItem("shortMovie");
@@ -25,13 +26,14 @@ function Movies({ savedMovies, onAdd, onDelete }) {
       const storedMovies = JSON.parse(storedMovie);
       setMoviesList(storedMovies);
 
-      if (storedShortMovie) {
+      if (storedShortMovie && isChecked) {
         setFilteredMovies(handleFilterMovieCheckbox(storedMovies));
       } else {
         setFilteredMovies(storedMovies);
       }
     }
-  }, []);
+  }, [isChecked]); 
+  
 
   useEffect(() => {
     if (localStorage.getItem("searchMovies")) {
@@ -111,6 +113,7 @@ function Movies({ savedMovies, onAdd, onDelete }) {
     localStorage.setItem("shortMovie", JSON.stringify(!isChecked).toString());
   };
 
+  
 
   return (
     <section>
