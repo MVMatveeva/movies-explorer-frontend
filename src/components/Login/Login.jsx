@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import logo from "../../images/header_logo.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login({ onLogin }) {
   const [email, setEmail] = useState("");
@@ -8,6 +8,14 @@ function Login({ onLogin }) {
   const [isValid, setIsValid] = useState(false);
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+    if (isLoggedIn) {
+      navigate("/");
+    }
+  }, [navigate]);
 
   useEffect(() => {
     validateForm();
