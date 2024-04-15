@@ -19,6 +19,14 @@
   width: 65.3906vw;
 }
 
+.SearchForm__error{
+  margin-top: 75px;
+  position: absolute;
+  margin-left: 36px;
+  color: #ff0000;
+  font-size: 12px;
+}
+
 .SearchForm__input {
   border: 0;
   padding: 0;
@@ -170,6 +178,13 @@ input:checked + .slider:before {
     font-size: 14px;
     margin-left: 15px;
   }
+
+  .SearchForm__error{
+    font-size: 8px;
+    margin-left: 18px;
+    margin-top: 54px;
+  }
+  
   .SearchForm__form {
     padding-top: 19px;
     display: flex;
@@ -197,4 +212,5 @@ input:checked + .slider:before {
   .SearchForm__filter {
     font-size: 11px;
   }
+
 }

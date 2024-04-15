@@ -10,7 +10,8 @@ function Header(props) {
     <header className="Header" style={{ backgroundColor: props.backgroundColor }}>
       <Link className="Header__logo-link" to="/"><img className="Header__logo" src={logo} alt="logo" /></Link>
       <nav className="Navigation">
-        {/*{props.loggedIn ? (*/}
+        {props.loggedIn ? (
+          <>
         <nav className="Navigation__desktop">
           <Link className="Header__film" to="/movies">
             Фильмы
@@ -58,7 +59,8 @@ function Header(props) {
           </nav>
           }
         </div>
-        {/* ) : (
+        </>
+         ) : (
           <>
             <Link className="Header__register" to="/signup">
               Регистрация
@@ -67,7 +69,7 @@ function Header(props) {
               Войти
             </Link>
           </>
-     )}*/}
+     )}
       </nav >
     </header >
   );

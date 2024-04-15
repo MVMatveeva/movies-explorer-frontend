@@ -45,9 +45,6 @@
     margin-right: 29.1667vw;
     width: 41.6667vw;
   }
-  .MoviesCardList__list > li:nth-child(n+9) {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 400px) {
@@ -63,8 +60,5 @@
     margin-right: 12.5vw;
     width: 75vw;
     margin-top: 47px;
-  }
-  .MoviesCardList__list > li:nth-child(n+6) {
-    display: none;
   }
 }
